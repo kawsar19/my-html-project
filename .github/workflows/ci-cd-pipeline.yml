@@ -20,5 +20,5 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          scp -i id_rsa -r ./ username@35.154.91.28:/var/www/html/
+          scp -i id_rsa -r . username@35.154.91.28:/var/www/html/my-html-project/
 

@@ -11,7 +11,15 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Specify Node.js version 20
+
+      - name: Install Dependencies
+        run: npm install  # Add this step if you have dependencies to install
 
       - name: Set up SSH
         run: |
@@ -21,4 +29,3 @@ jobs:
       - name: Deploy to Server
         run: |
           scp -i id_rsa -r . username@35.154.91.28:/var/www/html/my-html-project/
-

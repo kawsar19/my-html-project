@@ -16,10 +16,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Specify Node.js version 20
+          node-version: '20'  # Ensure Node.js version is 20
 
       - name: Install Dependencies
-        run: npm install  # Add this step if you have dependencies to install
+        run: npm install  # Install any necessary dependencies
 
       - name: Set up SSH
         run: |
